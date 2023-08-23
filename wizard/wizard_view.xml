@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="deposit_check_wizard_view" model="ir.ui.view">
+            <field name="name">Deposit Check Wizard</field>
+            <field name="model">deposit.check.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Deposit Check Wizard">
+                    <sheet>
+			    <group>
+				    <field name="payment_id" readonly="1"/>
+				    <field name="journal_id" 
+					    options="{'no_create': True, 'no_create_edit':True}"
+					    />
+                           </group>
+                    </sheet>
+                    <footer>
+                        <button string="Confirm" name="btn_confirm" type="object" default_focus="1" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+    </record>
+
+</odoo>
